@@ -7,10 +7,10 @@ Author- Tanmay Agrawal
   <li>
     <a href= "#day-1">Day-1: Inception of open-source EDA, OpenLANE and Sky130 PDK.</a>
   </li>
-  <li><a href="day-2">Day-2: Inception of open-source EDA, OpenLANE and Sky130 PDK.</a></li>
-  <li><a href="day-3">Day-3: Inception of open-source EDA, OpenLANE and Sky130 PDK.</a></li>
-  <li><a href="day-4">Day-4: Inception of open-source EDA, OpenLANE and Sky130 PDK.</a></li>
-  <li><a href="day-5">Day-5: Inception of open-source EDA, OpenLANE and Sky130 PDK.</a></li>
+  <li><a href="day-2">Day-2: Good floorplan vs bad floorplan and introduction to library cells.</a></li>
+  <li><a href="day-3">Day-3: Design library cell using Magic Layout and ngspice characterization.</a></li>
+  <li><a href="day-4">Day-4: Pre-layout timing analysis and importance of good clock tree.</a></li>
+  <li><a href="day-5">Day-5: Final steps for RTL2GDS using tritonRoute and openSTA.</a></li>
 </ol>
 <br>
 
@@ -154,7 +154,8 @@ This ENDS with the DAY1 workshop using an OpenLANE Toolkit.
 
 
 ## DAY-2
-### TITLE: 
+### TITLE: Good floorplan vs bad floorplan and introduction to library cells.
+<hr>
 
  
  
