@@ -19,9 +19,9 @@ Author- Tanmay Agrawal
 <hr>
 <h5>CONTENT:</h5>
 <ol>
-  <li><a href="1-sky130_d1_sk1-how-to-talk-to-computer">SKY130_D1_SK1: How to talk to computers</a></li>
-  <li><a href="2-sky130_d1_sk2-soc-design-and-openlane">SKY130_D1_SK2: SOC Design and OpenLANE</a></li>
-  <li><a href="3-sky130_d1_sk3-get-familiar-to-open-source-eda-tools">SKY130_D1_SK3: Get familiar to open-source EDA tools</a></li>
+  <li><a href="#1-sky130_d1_sk1-how-to-talk-to-computer">SKY130_D1_SK1: How to talk to computers</a></li>
+  <li><a href="#2-sky130_d1_sk2-soc-design-and-openlane">SKY130_D1_SK2: SOC Design and OpenLANE</a></li>
+  <li><a href="#3-sky130_d1_sk3-get-familiar-to-open-source-eda-tools">SKY130_D1_SK3: Get familiar to open-source EDA tools</a></li>
 </ol>
 <hr>
 
