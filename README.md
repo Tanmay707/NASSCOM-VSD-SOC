@@ -106,10 +106,10 @@ Then, the next step after this is we synthesize the RTL flow for Physical Design
  <img src="day27.png">
  <br>
 The next stage is:<br>
- <img src="day27.png">
+ <img src="day28.png">
  <br>
  The next stage is:<br>
- <img src="day27.png">
+ <img src="day29.png">
  <br>
  <hr>
 
