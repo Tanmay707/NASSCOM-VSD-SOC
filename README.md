@@ -122,20 +122,55 @@ The next stage is:<br>
  Now, First we try to get into the working directory on which we have to work to access the OpenLANE flow.<br>
  <img src="images/day30.png">
  <br>
- The Path for the current working directory to operate will be: ~/Desktop/work/tools/openlane_workshop_dir/openlane/ <br>
- After entering into the above mentioned directory type command- "docker" to access all the tools available in the openLANE. Then command to start the session will be: flow.tcl -interactive <br>
+ The Path for the current working directory to operate will be:<br>
+ ```console
+ vsduser@vsdsquadron:~/Desktop/work/tools/openlane_workshop_dir/openlane/
+```
+<br>
+ After entering into the above mentioned directory type command-<br>
+ 
+```console
+ vsduser@vsdsquadron:~/Desktop/work/tools/openlane_workshop_dir/openlane$ docker
+```
+<br>
+to access all the tools available in the openLANE. Then command to start the session will be:<br>
+
+```console
+bash-4.2$ flow.tcl -interactive
+```
+<br>
  <img src="images/day31.png">
  <br>
- By the meantime we can also explore the /openlane dir. Below are the listed item present in /openlane/designs/ directory.<br>
+ By the meantime we can also explore the /openlane dir. Below are the listed item present in <br>
+ 
+ ```console
+ vsduser@vsdsquadron:~/Desktop/work/tools/openlane_workshop_dir/openlane$ cd designs/
+ ```
+ <br>
  <img src="images/day32.png">
  <br>
- Coming back to the OpenLane interactive session. We will be preparing the design file for picorv32a. Command for preparing will be prep -design picorv32a <br>
+ Coming back to the OpenLane interactive session. We will be preparing the design file for picorv32a. Command for preparing will be <br>
+ 
+ ```console
+ % prep -design picorv32a 
+ ```
+ <br>
  <img src="images/day33.png">
  <br>
- After this for synthesizing the design we run the command rum_synthesis.<br>
+ After this for synthesizing the design we run the command <br>
+ 
+ ```console
+ % run_synthesis
+ ```
+ <br>
  <img src="images/day34.png">
  <br>
- Now, switch to the design directory in the openlane directory. The cd to reports/synthesis/less 1-yosys_4.stat.rpt/ to print the synthesis statistics.<br>
+ Now, switch to the design directory in the openlane directory. The cd to <br>
+ 
+ ```console
+ vsduser@vsdsquadron:~/Desktop/work/tools/openlane_workshop_dir/openlane/designs/picorv32a/runs/15-03_19-57$ cd reports/synthesis/less 1-yosys_4.stat.rpt
+ ```
+ to print the synthesis statistics.<br>
  <img src="images/day35.png">
  <br>
  To calculate the Flop-Ratio:<br>
