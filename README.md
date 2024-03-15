@@ -78,7 +78,7 @@ Then, the next step after this is we synthesize the RTL flow for Physical Design
 <br>
  Let's understand the standard RTL to GDSII Flow. This is described below using the flow diagram:
  <br>
- <img src="day120.png">
+ <img src="day20.png">
  <br>
  Now, let's take the first stage in the flow:<br>
  Synthesis: It Converts RTL to a circuit out of components from the standard cell library (SCL).<br>
