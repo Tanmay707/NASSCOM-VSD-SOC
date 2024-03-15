@@ -73,3 +73,53 @@ Then, the next step after this is we synthesize the RTL flow for Physical Design
 <hr>
 
 ### 2. SKY130_D1_SK2: SOC Design and OpenLANE
+
+<hr>
+<br>
+ Let's understand the standard RTL to GDSII Flow. This is described below using the flow diagram:
+ <br>
+ <img src="day120.png">
+ <br>
+ Now, let's take the first stage in the flow:<br>
+ Synthesis: It Converts RTL to a circuit out of components from the standard cell library (SCL).<br>
+ <img src="day21.png">
+ <br>
+ The other stage is:<br>
+ Floor and Power Planning: It is divided into two categories that are :<br>
+ <ol>
+   <li>Chip-Floor Planning: Partition the chip die between different system building blocks and place the I/O Pads.</li>
+   <li>Macro-Floor Planning: Dimensions, pin locations, rows definition.</li>
+ </ol>
+ <img src="day22.png"><br><img src="day23.png"><br>
+ Power Planning: The power network is connected by multiple vdd, vss and gnd.
+ <br>
+ <img src="day24.png">
+ <br>
+ The next stage is:<br>
+ Placement: Placing the cells on the floorplan rows, aligned with the sites.<br>
+ <img src="day25.png">
+ <br>
+ Placement is divided into 2 steps: Global and Detailed Placement.<br>
+ <img src="day26.png">
+ <br>
+ The next stage is:<br>
+ <img src="day27.png">
+ <br>
+The next stage is:<br>
+ <img src="day27.png">
+ <br>
+ The next stage is:<br>
+ <img src="day27.png">
+ <br>
+ <hr>
+
+### 3. SKY130_D1_SK3: Get familiar to open-source EDA tools
+ 
+ <hr>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
