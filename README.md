@@ -27,6 +27,8 @@ Author- Tanmay Agrawal
 
 ### 1. SKY130_D1_SK1: How to talk to computer
 <hr>
+![](/images/day11.png)
+
 
 
 
