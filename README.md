@@ -116,6 +116,46 @@ The next stage is:<br>
 ### 3. SKY130_D1_SK3: Get familiar to open-source EDA tools
  
  <hr>
+
+ Let's Dive into the OpenLane toolkit provided to access the open-source software helping in the complete flow from RTL to GDSII.<br>
+ <br>
+ Now, First we try to get into the working directory on which we have to work to access the OpenLANE flow.<br>
+ <img src="images/day30.png">
+ <br>
+ The Path for the current working directory to operate will be: ~/Desktop/work/tools/openlane_workshop_dir/openlane/ <br>
+ After entering into the above mentioned directory type command- "docker" to access all the tools available in the openLANE. Then command to start the session will be: flow.tcl -interactive <br>
+ <img src="images/day31.png">
+ <br>
+ By the meantime we can also explore the /openlane dir. Below are the listed item present in /openlane/designs/ directory.<br>
+ <img src="images/day32.png">
+ <br>
+ Coming back to the OpenLane interactive session. We will be preparing the design file for picorv32a. Command for preparing will be prep -design picorv32a <br>
+ <img src="images/day33.png">
+ <br>
+ After this for synthesizing the design we run the command rum_synthesis.<br>
+ <img src="images/day34.png">
+ <br>
+ Now, switch to the design directory in the openlane directory. The cd to reports/synthesis/less 1-yosys_4.stat.rpt/ to print the synthesis statistics.<br>
+ <img src="images/day35.png">
+ <br>
+ To calculate the Flop-Ratio:<br>
+ Flop-Ratio= (Total number of D-Flip-Flops)/(Total number of cells)<br>
+ %Flop-Ratio= Flop-Ratio*100%<br>
+ Below represents the statistics of the synthesis:<br>
+ <img src="images/day36.png"><br><img src="images/day37.png"><br><img src="images/day38.png"><br>
+<br>
+Hence, from the above obtained statistics the Flop-Ratio will be:<br>
+Flop-Ratio=(1613/14876)=0.1084296<br>
+% Flop-Ratio = 10.84%<br>
+<br>
+This ENDS with the DAY1 workshop using an OpenLANE Toolkit.
+<br>
+<br>
+
+
+## DAY-2
+### TITLE: 
+
  
  
  
