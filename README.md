@@ -27,12 +27,12 @@ Author- Tanmay Agrawal
 
 ### 1. SKY130_D1_SK1: How to talk to computer
 <hr>
-<img src="./day11.png">
+<img src="images/day11.png">
 <br>
 This is the Arduino Leonardo board consisting of a Processor/SOC and various other interconnecting devices and peripherals.<br>
 The highlighted part in the above figure is the on block where the entire VLSI moves around.<br><br>
 The picture below dipicts the layout of the entire microcontroller board.<br>
-<img src="./day12.png">
+<img src="images/day12.png">
 <br>
 Thus, this picture consists of various interconnect devices, external chips and various other devices present. Few features of this layout are:<br>
 <ul>
@@ -42,33 +42,33 @@ Thus, this picture consists of various interconnect devices, external chips and 
 <br>
 But, our main objective is to design a Processor/ SOC so the picture below depicts the design of a QFN-48 Package with the chip in the middle of it connected by bond wires or interconnect wires.
 <br>
-<img src="day13.png">
+<img src="images/day13.png">
 <br>
 Also this Package comprises of a Die, I/O Pads, core. The layout of this is depicted below:<br>
-<img src="day14.png">
+<img src="images/day14.png">
 <br>
 Now, the core of this SOC consists of the Two major parts these are:<br>
 <ul>
   <li>Foundry IP's: These the factories that helps to implement the design on the silicon wafer and also to make chips by there intelligence. These chips made by the foundrys are termed as foundry Intellectual Property.</li>
   <li>Macros: These are like a pure digital logics.</li>
 </ul>
-<img src="day15.png">
+<img src="images/day15.png">
 <br>
 As, we are using RISC V Architecture also called Instruction Set Architecture (ISA) to design an SOC. The picture below depicts the flow from RTL2GDS.
-<img src="day16.png">
+<img src="images/day16.png">
 <br>
 Now, Let's move on to how the Software Applications connects to Hardwares.<br>
 Shown, below is the entire flow of how the software connects to Hardware.
 <br>
-<img src="day17.png">
+<img src="images/day17.png">
 <br>
 Now, we are taking the example of a stop watch flow and the implementation is done using RISCV Architecture.<br>
-<img src="day18.png">
+<img src="images/day18.png">
 <br>
 Thus, deep diving into the flow we observed that there is one more process after the Assembler is the use of HDL(Hardware Descriptive Language).<br>
 We, convert the Binary Code into the HDL that signifies that what is the function that the entire hardware will be performing with that bit stream.<br>
 Then, the next step after this is we synthesize the RTL flow for Physical Design Implementation.<br>
-<img src="day19.png">
+<img src="images/day19.png">
 <br>
 <hr>
 
@@ -78,11 +78,11 @@ Then, the next step after this is we synthesize the RTL flow for Physical Design
 <br>
  Let's understand the standard RTL to GDSII Flow. This is described below using the flow diagram:
  <br>
- <img src="day20.png">
+ <img src="images/day20.png">
  <br>
  Now, let's take the first stage in the flow:<br>
  Synthesis: It Converts RTL to a circuit out of components from the standard cell library (SCL).<br>
- <img src="day21.png">
+ <img src="images/day21.png">
  <br>
  The other stage is:<br>
  Floor and Power Planning: It is divided into two categories that are :<br>
@@ -90,26 +90,26 @@ Then, the next step after this is we synthesize the RTL flow for Physical Design
    <li>Chip-Floor Planning: Partition the chip die between different system building blocks and place the I/O Pads.</li>
    <li>Macro-Floor Planning: Dimensions, pin locations, rows definition.</li>
  </ol>
- <img src="day22.png"><br><img src="day23.png"><br>
+ <img src="images/day22.png"><br><img src="images/day23.png"><br>
  Power Planning: The power network is connected by multiple vdd, vss and gnd.
  <br>
- <img src="day24.png">
+ <img src="images/day24.png">
  <br>
  The next stage is:<br>
  Placement: Placing the cells on the floorplan rows, aligned with the sites.<br>
- <img src="day25.png">
+ <img src="images/day25.png">
  <br>
  Placement is divided into 2 steps: Global and Detailed Placement.<br>
- <img src="day26.png">
+ <img src="images/day26.png">
  <br>
  The next stage is:<br>
- <img src="day27.png">
+ <img src="images/day27.png">
  <br>
 The next stage is:<br>
- <img src="day28.png">
+ <img src="images/day28.png">
  <br>
  The next stage is:<br>
- <img src="day29.png">
+ <img src="images/day29.png">
  <br>
  <hr>
 
