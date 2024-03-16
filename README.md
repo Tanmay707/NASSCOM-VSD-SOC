@@ -19,13 +19,13 @@ Author- Tanmay Agrawal
 <hr>
 <h5>CONTENT:</h5>
 <ol>
-  <li><a href="#1-sky130_d1_sk1-how-to-talk-to-computer">SKY130_D1_SK1: How to talk to computers</a></li>
-  <li><a href="#2-sky130_d1_sk2-soc-design-and-openlane">SKY130_D1_SK2: SOC Design and OpenLANE</a></li>
-  <li><a href="#3-sky130_d1_sk3-get-familiar-to-open-source-eda-tools">SKY130_D1_SK3: Get familiar to open-source EDA tools</a></li>
+  <li><a href="#1-how-to-talk-to-computer">How to talk to computers</a></li>
+  <li><a href="#2-soc-design-and-openlane">SOC Design and OpenLANE</a></li>
+  <li><a href="#3-get-familiar-to-open-source-eda-tools">Get familiar to open-source EDA tools</a></li>
 </ol>
 <hr>
 
-### 1. SKY130_D1_SK1: How to talk to computer
+### 1. How to talk to computer
 <hr>
 <img src="images/day11.png">
 <br>
@@ -72,7 +72,7 @@ Then, the next step after this is we synthesize the RTL flow for Physical Design
 <br>
 <hr>
 
-### 2. SKY130_D1_SK2: SOC Design and OpenLANE
+### 2. SOC Design and OpenLANE
 
 <hr>
 <br>
@@ -113,7 +113,7 @@ The next stage is:<br>
  <br>
  <hr>
 
-### 3. SKY130_D1_SK3: Get familiar to open-source EDA tools
+### 3. Get familiar to open-source EDA tools
  
  <hr>
 
