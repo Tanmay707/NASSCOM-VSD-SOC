@@ -191,6 +191,42 @@ This ENDS with the DAY1 workshop using an OpenLANE Toolkit.
 ## DAY-2
 ### TITLE: Good floorplan vs bad floorplan and introduction to library cells.
 <hr>
+<h5>CONTENT:</h5>
+<ol>
+  <li><a href="#">Chip Floor Planning considerations</a></li>
+  <li><a href="#">Library Binding and Placement</a></li>
+  <li><a href="#">Cell design and characterization flows</a></li>
+  <li><a href="#">General timing characterization parameters</a></li>
+</ol>
+<hr>
+1. Chip Floor Planning considerations
+<hr>
+<br>
+This module begins with the basic concepts of floor planning that includes netlisting defining width and height of core and die.<br>
+Now let's begin by defining the Netlist: It describes the connectivity between all the Electronic components.<br>
+Below, represents the netlisting of the various Flip-Flops and logic gates.<br>
+<img src="images/day39.png"><br>
+For, placing the netlist in the core of the chip we need to convert the logic gates into the specified physical dimensions. So, that they are to correctly placed inside the core.<br>
+Below, is the representation of the conversion of netlist into physical dimensions.<br>
+<img src="images/day40.png"><br>
+Now, to calculate the exact dimensions of the core and die we need to first specify the dimensions of the standard cells (logic gates) and Flip-Flops.<br>
+Below is the measurement of the std. cell and the Flip-Flop for further calculation of the core.<br>
+<img src="images/day41.png"><br>
+<br>
+Let's define what is the core on the silicon wafer??<br>
+Core is defined as the section of the chip where the fundamental logic of the design is placed.<br>
+<img src="images/day42.png"><br>
+What is the Die on the silicon wafer??<br>
+Die consists of core, it is a small semiconductor material specimen on which the fundamental circuit is fabricated.<br>
+<img src="images/day43.png"><br>
+Let's calculate the Two main parameters in the context of a core and die.<br>
+These are: a). Utilization factor and b). Aspect Ratio.<br>
+Below is the mathematical representation of these parameters.<br>
+<img src="images/day44.png"><br>
+In the above example the core is 4unit*2unit = 8sq. units. But, the Netlist has the dimension of 2unit * 2unit = 4sq. units.<br>
+Thus, the Utilization Factor = 0.5 and the Aspect Ratio = 0.5 <br>
+
+
 
  
  
