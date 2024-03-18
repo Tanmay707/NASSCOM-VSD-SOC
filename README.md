@@ -257,6 +257,27 @@ The advantage of decoupling capacitor is represented in the diagram below.<br>
 Thus, the final placement onto the core of the die is shown below.<br>
 <img src="images/day54.png">
 <br>
+Consider different macros /  IP's are interconnected to each other with power supply and there is the connection established between a Driver and a Load as shown below.<br>
+<img src="images/day55.png">
+<br>
+These buses are a 16-bit bus, lets say it is connected to an inverter. Then they encounter with the problem of Ground Bound and Voltage Droop as shown below.<br>
+<img src="images/day56.png">
+<br>
+<img src="images/day57.png"><br>
+To overcome the above depicted drawbacks we use multiple rails of vdd and vss so that any logic circuit can withdraw the required potential from the nearest branch.<br>
+<img src="images/day58.png"><br>
+Thus, the final pin placement on a core of a die will be done as shown below.<br>
+<img src="images/day59.png"><br>
+Now, we are taking a design to understand the placement and routing on silicon.The complete design is shown below.<br>
+<img src="images/day60.png"><br>
+This the final placement of the input and output pins with the logical cell placement blockage which is used to block the automatic routing and placement is done and shown below.<br>
+<img src="images/day61.png"><br>
+<br>
+Now, moving to OpenLANE to understand the concept of floor-planning and automated placement and routing.<br>
+
+
+
+
 
 
 
