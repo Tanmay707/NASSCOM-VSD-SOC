@@ -226,6 +226,37 @@ Below is the mathematical representation of these parameters.<br>
 <img src="images/day44.png"><br>
 In the above example the core is 4unit*2unit = 8sq. units. But, the Netlist has the dimension of 2unit * 2unit = 4sq. units.<br>
 Thus, the Utilization Factor = 0.5 and the Aspect Ratio = 0.5 <br>
+<br>
+Now, in this idea of floor planning lets come up to How to define the location of Pre-Placed cells. To implement this we cut the netlist into different parts and implement that considering each block as the individual black box.<br>
+The above statement is depicted below.<br>
+<img src="images/day45.png">
+<br>
+<img src="images/day46.png">
+<br>
+Now, the two different Boxes are to be termed as two different IP's or modules.<br>
+<img src="images/day47.png">
+<br>
+Various other different examples of the IP's and modules are shown below.<br>
+<img src="images/day48.png">
+<br>
+Now, lets define different terminologies.These are:<br>
+1. Floorplanning: The arrangements of these IP's onto a chip.<br>
+2. Pre-Placed Cells: These IP's / Blocks have user-defined locations, and hence are placed in chip before automated placement-and-routing.<br>
+Thus, the Pre-Placement is shown below.<br>
+<img src="images/day49.png"><br>
+The concept of Decoupling capacitor and its relevance in the floorplan and in the circuits are explained below.<br>
+<img src="images/day50.png"><br>
+<img src="images/day51.png">
+<br>
+<img src="images/day52.png">
+<br>
+So, the overcome the mid range of noise margin i.e., from VIH to VIL we will place the Decoupling capacitor.<br>
+The advantage of decoupling capacitor is represented in the diagram below.<br>
+<img src="images/day53.png">
+<br>
+Thus, the final placement onto the core of the die is shown below.<br>
+<img src="images/day54.png">
+<br>
 
 
 
