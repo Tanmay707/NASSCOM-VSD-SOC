@@ -193,13 +193,14 @@ This ENDS with the DAY1 workshop using an OpenLANE Toolkit.
 <hr>
 <h5>CONTENT:</h5>
 <ol>
-  <li><a href="#">Chip Floor Planning considerations</a></li>
+  <li><a href="#1-chip-floor-planning-considerations">Chip Floor Planning considerations</a></li>
   <li><a href="#">Library Binding and Placement</a></li>
   <li><a href="#">Cell design and characterization flows</a></li>
   <li><a href="#">General timing characterization parameters</a></li>
 </ol>
 <hr>
-1. Chip Floor Planning considerations
+
+### 1. Chip Floor Planning considerations
 <hr>
 <br>
 This module begins with the basic concepts of floor planning that includes netlisting defining width and height of core and die.<br>
