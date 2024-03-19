@@ -194,7 +194,7 @@ This ENDS with the DAY1 workshop using an OpenLANE Toolkit.
 <h5>CONTENT:</h5>
 <ol>
   <li><a href="#1-chip-floor-planning-considerations">Chip Floor Planning considerations</a></li>
-  <li><a href="#">Library Binding and Placement</a></li>
+  <li><a href="#2-library-binding-and-placement">Library Binding and Placement</a></li>
   <li><a href="#">Cell design and characterization flows</a></li>
   <li><a href="#">General timing characterization parameters</a></li>
 </ol>
@@ -315,6 +315,11 @@ Shown below is the layout of the die and all the pre-placed cells and std cells 
 <img src="images/day68.png"><br>
 If we want to know the details of the specific I/O port. Then we select it and write what in the tkcon.tcl window.<br>
 <img src="images/day69.png"><br>
+<br>
+<hr>
+
+### 2. Library Binding and Placement
+<hr>
 
 
 
