@@ -266,7 +266,7 @@ These buses are a 16-bit bus, lets say it is connected to an inverter. Then they
 <img src="images/day57.png"><br>
 To overcome the above depicted drawbacks we use multiple rails of vdd and vss so that any logic circuit can withdraw the required potential from the nearest branch.<br>
 <img src="images/day58.png"><br>
-Thus, the final pin placement on a core of a die will be done as shown below.<br>
+Thus, the final pin placement on a core of a die will be done as shown.<br>
 <img src="images/day59.png"><br>
 Now, we are taking a design to understand the placement and routing on silicon.The complete design is shown below.<br>
 <img src="images/day60.png"><br>
