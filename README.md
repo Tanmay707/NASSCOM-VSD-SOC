@@ -274,6 +274,47 @@ This the final placement of the input and output pins with the logical cell plac
 <img src="images/day61.png"><br>
 <br>
 Now, moving to OpenLANE to understand the concept of floor-planning and automated placement and routing.<br>
+After the Day1 synthesis and calculation of Flop Ratio now we are diving in the concepts of Floorplanning, Placement and Routing.<br>
+There are three files at different locations they are priortized according to there considerations that which values overwrites the other.<br>
+This heirarcy is shown below.<br>
+<img src="images/day62.png"><br>
+<img src="images/day63.png"><br>
+Now, in the interactive window write the command.<br>
+
+```console
+%run_floorplan
+```
+<br>
+<img src="images/day64.png"><br>
+Then, cd to the specified directory to look into the merged and final vmetal and hmetal and core utilisation as per the priority order.<br>
+
+```console
+cd openlane/designs/picorv32a/runs/18-03_17-40/logs/floorplan/less io-Placer.log
+```
+<br>
+Shown below is the final file.<br>
+<img src="images/day65.png"><br>
+Also, to check the die area cd to the below directory.<br>
+
+```console
+cd  openlane/designs/picorv32a/runs/18-03_17-40/results/floorplan/less picorv32a.floorplan.def
+```
+<br>
+The output will be as shown.<br>
+<img src="images/day66.png">
+<br>
+Now, to open the Layout we use magic.<br>
+The following command in the same directory as above mentioned will help to open the layout editor.<br>
+
+```console
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech led read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+```
+<br>
+Shown below is the layout of the die and all the pre-placed cells and std cells on the layout are shown below.<br>
+<img src="images/day67.png"><br>
+<img src="images/day68.png"><br>
+If we want to know the details of the specific I/O port. Then we select it and write what in the tkcon.tcl window.<br>
+<img src="images/day69.png"><br>
 
 
 
