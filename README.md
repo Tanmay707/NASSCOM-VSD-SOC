@@ -378,16 +378,6 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ### 3. Cell design and characterization flows
 <hr>
 Thus, After final placement and routing for the above netlist the final die will be represented as shown.<br>
+It consists of standard cells (all the basic logic gates or cells) that are stored in the Library.<br>
 <img src="images/day82.png"><br>
 
-
-
-
-
- 
- 
- 
- 
- 
- 
- 
