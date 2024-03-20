@@ -195,7 +195,7 @@ This ENDS with the DAY1 workshop using an OpenLANE Toolkit.
 <ol>
   <li><a href="#1-chip-floor-planning-considerations">Chip Floor Planning considerations</a></li>
   <li><a href="#2-library-binding-and-placement">Library Binding and Placement</a></li>
-  <li><a href="#">Cell design and characterization flows</a></li>
+  <li><a href="#3-cell-design-and-characterization-flows">Cell design and characterization flows</a></li>
   <li><a href="#">General timing characterization parameters</a></li>
 </ol>
 <hr>
