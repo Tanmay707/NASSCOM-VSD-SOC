@@ -340,7 +340,7 @@ The Last section is placed as shown.<br>
 <img src="images/day77.png"><br>
 <br>
 Now, In Library Characterization and Modelling these 5 steps a very important role. These are as follows:<br>
-<ol><
+<ol>
       <li>Logic Synthesis.</li>
       <li>Floorplanning.</li>
       <li>Placement.</li>
@@ -362,7 +362,25 @@ Run the following command after synthesis and floorplanning.<br>
 The move into the following directory to open magic placement.<br>
 
 ```console
-cd openlane/
+cd openlane/designs/picorv32a/runs/19-03_15-04/results/placement
+```
+<br>
+To open the magic from the placement directory. We use the command given below.<br>
+
+```console
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech led read ../../tmp/merged.lef def read picorv32a.placement.def &
+```
+<br>
+<img src="images/day80.png"><br>
+<img src="images/day81.png"><br>
+<hr>
+
+### 3. Cell design and characterization flows
+<hr>
+Thus, After final placement and routing for the above netlist the final die will be represented as shown.<br>
+<img src="images/day82.png"><br>
+
+
 
 
 
