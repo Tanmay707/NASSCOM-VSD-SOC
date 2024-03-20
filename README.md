@@ -320,10 +320,49 @@ If we want to know the details of the specific I/O port. Then we select it and w
 
 ### 2. Library Binding and Placement
 <hr>
+To understand the concept of Placement Lets consider a net consisting of a pre-placed cells and standard cells.
+<br>
+<img src="images/day70.png"><br>
+So, for placement on the core we specify some physical dimensions to each and every cell. Thus, this is termed as Library. It consists of various pre-defined std. cells and pre-placed cells.<br>
+<img src="images/day71.png"><br>
+Thus, the complete setup of floorplan, netlist and library management is shown.<br>
+<img src="images/day72.png"><br>
+Now, after placing all the cell from the library onto the core of the die considering no distruption in the pre-placed cells. Thus, this the stage where we estimate wire length and capacitances and based on that we insert repeaters. Thus, this is termed as optimised placement.<br>
+<img src="images/day73.png"><br>
+Now, to checking the optimisation of the placement for each section.<br>
+The first section is placed as shown.<br>
+<img src="images/day74.png"><br>
+The second section is placed as shown.<br>
+<img src="images/day75.png"><br>
+The Third section is placed as shown.<br>
+<img src="images/day76.png"><br>
+The Last section is placed as shown.<br>
+<img src="images/day77.png"><br>
+<br>
+Now, In Library Characterization and Modelling these 5 steps a very important role. These are as follows:<br>
+<ol><
+      <li>Logic Synthesis.</li>
+      <li>Floorplanning.</li>
+      <li>Placement.</li>
+      <li>CTS (Clock Tree Synthesis).</li>
+      <li>Routing</li>
+</ol>
+<br>
+<img src="images/day78.png"><br>
+One common thing across all the stages are "GATES or CELLS".<br>
+<img src="images/day79.png"><br>
+<br><br>
+Now, lets simulate the above learned placement using the OpenLANE toolkit.<br>
+Run the following command after synthesis and floorplanning.<br>
 
+```console
+%run_placement
+```
+<br>
+The move into the following directory to open magic placement.<br>
 
-
-
+```console
+cd openlane/
 
 
 
