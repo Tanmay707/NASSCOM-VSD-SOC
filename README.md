@@ -372,6 +372,7 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ```
 <br>
 <img src="images/day80.png"><br>
+This shows the legal placement of standard cells.<br>
 <img src="images/day81.png"><br>
 <hr>
 
