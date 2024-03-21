@@ -1,4 +1,4 @@
-# NASSCOM-VSD-SOC
+![image](https://github.com/Tanmay707/NASSCOM-VSD-SOC/assets/99081560/521c56f0-76f7-4a3f-ae4a-8af685e1edea)# NASSCOM-VSD-SOC
 This repository consists of a 5 Day workshop conducted by NASSCOM and VSD on SOC Design and Planning. Also, this includes all the 5 Days learning from videos provided by VSD and LAB work on the OpenLANE tool provided by NASSCOM.<br><br>
 Author- Tanmay Agrawal
 <br>
@@ -196,7 +196,7 @@ This ENDS with the DAY1 workshop using an OpenLANE Toolkit.
   <li><a href="#1-chip-floor-planning-considerations">Chip Floor Planning considerations</a></li>
   <li><a href="#2-library-binding-and-placement">Library Binding and Placement</a></li>
   <li><a href="#3-cell-design-and-characterization-flows">Cell design and characterization flows</a></li>
-  <li><a href="#">General timing characterization parameters</a></li>
+  <li><a href="#4-general-timing-characterization-parameters">General timing characterization parameters</a></li>
 </ol>
 <hr>
 
@@ -381,4 +381,68 @@ This shows the legal placement of standard cells.<br>
 Thus, After final placement and routing for the above netlist the final die will be represented as shown.<br>
 It consists of standard cells (all the basic logic gates or cells) that are stored in the Library.<br>
 <img src="images/day82.png"><br>
+Also, the library consists of various varities of std. cells of different sizes and different functionality.<br>
+<img src="images/day83.png"><br>
+Now, lets divide the designing of each std. cell. Thus, the cell design flow is as follows.<br>
+<img src="images/day84.png"><br>
+The first design step i.e., Inputs is classified as shown below.<br>
+<img src="images/day85.png"><br>
+<img src="images/day86.png"><br>
+The second step is the Design Step or the circuit design step also consists of an addition step of CDL (circuit description language).<br>
+<img src="images/day87.png"><br>
+<img src="images/day88.png"><br>
+Now, lets move to the layout design step taking the Euler's path into consideration. Also, the layout of a cmos inverter is made on magic is shown below.<br>
+<img src="images/day89.png"><br>
+<img src="images/day90.png"><br>
+Now, the last stage the Output stage also consists of the GDSII file, LEF and extracted spice netlist file that helps in determining the Time, noise and power characterstics of the circuit.<br>
+<img src="images/day91.png"><br>
+Now, the characterization flow is described in 1-8 steps and then they are passed into the software GUNA the results to an output model file that characterizes the timing, noise and power states of a circuit.<br>
+<img src="images/day92.png"><br>
+<img src="images/day93.png"><br>
+<img src="images/day94.png"><br>
+<hr>
+
+### 4. General timing characterization parameters
+<hr>
+Now, lets analyse the timing characterstics for a stimulus applied as an input to the buffer and various timing analyses comprises of input and output slew rates input and output rise and fall threshold timings etc.<br>
+<img src="images/day95.png"><br>
+<img src="images/day96.png"><br>
+<img src="images/day97.png"><br>
+<img src="images/day98.png"><br>
+<img src="images/day99.png"><br>
+<img src="images/day100.png"><br>
+<img src="images/day101.png"><br>
+<img src="images/day102.png"><br>
+Now, lets calculate the propagation delay and the transition time.<br>
+The negative propagation delay shows that the circuit is not proparly synchronised.
+<img src="images/day103.png"><br>
+Positive Propagation delay:<br>
+<img src="images/day104.png"><br>
+Negative Propagation delay:<br>
+<img src="images/day105.png"><br>
+Input transition time:<br>
+<img src="images/day106.png"><br>
+Output transition time:<br>
+<img src="images/day107.png"><br>
+The final transition delay calculation.<br>
+<img src="images/day108.png"><br>
+<br>
+<br>
+
+
+## DAY-3
+### TITLE: Design library cell using Magic Layout and ngspice characterization.
+<hr>
+<h5>CONTENT:</h5>
+<ol>
+  <li><a href="#1-labs-for-cmos-inverter-ngspice-simulation">Labs for CMOS inverter ngspice simulations</a></li>
+  <li><a href="#">Inception of Layout and CMOS fabrication process</a></li>
+  <li><a href="#">Sky130 Tech File Labs</a></li>
+</ol>
+<hr>
+
+### 1. Labs for CMOS inverter ngspice simulations
+<hr>
+<br>
+
 
