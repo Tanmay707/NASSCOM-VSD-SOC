@@ -444,5 +444,36 @@ The final transition delay calculation.<br>
 ### 1. Labs for CMOS inverter ngspice simulations
 <hr>
 <br>
+In this lab first we try to change the i/o ports placement schemes by using io placer.<br>
+After running floorplan cd to the given directory.<br>
+
+```console
+cd openlane/designs/picorv32a/runs/21-03_18-42/results/floorplan/
+```
+<br>
+Run the following command after comming to the above mentioned directory.<br>
+
+```console
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech led read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+```
+<br>
+The io placement before changing the configurations.<br>
+<img src="images/day109.png"><br>
+Now, change the directory to the following location to fetch the path that should be changed to change io settings.<br>
+
+```console
+cd openlane/configuration/less floorplan.tcl
+```
+<br>
+Then, place the following commands in the interactive window and check the layout again by the above mentioned procedure.<br>
+
+```console
+%set ::env(FP_IO_MODE) 2
+%run_floorplan
+```
+<br>
+<img src="images/day110.png"><br>
+Now, we have a SPICE deck as shown below.<br>
+<img src="images/day111.png"><br>
 
 
