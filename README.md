@@ -435,7 +435,7 @@ The final transition delay calculation.<br>
 <hr>
 <h5>CONTENT:</h5>
 <ol>
-  <li><a href="#1-labs-for-cmos-inverter-ngspice-simulation">Labs for CMOS inverter ngspice simulations</a></li>
+  <li><a href="#1-labs-for-cmos-inverter-ngspice-simulations">Labs for CMOS inverter ngspice simulations</a></li>
   <li><a href="#">Inception of Layout and CMOS fabrication process</a></li>
   <li><a href="#">Sky130 Tech File Labs</a></li>
 </ol>
