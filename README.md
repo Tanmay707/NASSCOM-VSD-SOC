@@ -436,7 +436,7 @@ The final transition delay calculation.<br>
 <h5>CONTENT:</h5>
 <ol>
   <li><a href="#1-labs-for-cmos-inverter-ngspice-simulations">Labs for CMOS inverter ngspice simulations</a></li>
-  <li><a href="#">Inception of Layout and CMOS fabrication process</a></li>
+  <li><a href="#2-inception-of-layout-and-cmos-fabrication-process">Inception of Layout and CMOS fabrication process</a></li>
   <li><a href="#">Sky130 Tech File Labs</a></li>
 </ol>
 <hr>
@@ -475,5 +475,39 @@ Then, place the following commands in the interactive window and check the layou
 <img src="images/day110.png"><br>
 Now, we have a SPICE deck as shown below.<br>
 <img src="images/day111.png"><br>
+<img src="images/day112.png"><br>
+Now, lets clone the repository containing the inverter layout and run all the post-layout simulations.<br>
+
+```console
+cd openlane/
+```
+<br>
+Command to clone from the above directory.<br>
+
+```console
+git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+```
+<br>
+Now, change to the clone directory and copy the tech file from the below mentioned directory.<br>
+
+```console
+cd openlane_working_dir/pdks/sky130A/libs.tech/cp sky130A.tech /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/
+```
+<br>
+Now, open the layout from the vsdstdcelldesign directory by using the following command.<br>
+
+```console
+magic -T sky130A.tech sky130_inv.mag &
+```
+<br>
+Now, the layout of the CMOS inverter will be shown below.<br>
+<img src="images/day113.png"><br>
+<hr>
+
+### 2. Inception of Layout and CMOS fabrication process
+<hr>
+<br>
+
+
 
 
