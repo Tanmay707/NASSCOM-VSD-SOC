@@ -579,5 +579,29 @@ The fall delay data points at 50% input and 50% output are shown below.<br>
 <img src="images/day128.png"><br>
 Thus, Fall transition = 4.07547e-09 - 4.05004e-09 = 25.43ps
 <br>
+<br>
+Now, taking the Lab challanges that are to fix poly.9 error and to implement polyresistor spacing to diff and tap also to describe DRC error as geometrical construct and last challenge is to find the missing and incorrect rules.<br>
+Shown below is the poly resistor challenge.<br>
+<img src="images/day129.png"><br>
+<img src="images/day130.png"><br>
+<img src="images/day131.png"><br>
+Shown below is the n_well missing rule challenge.<br>
+<img src="images/day132.png"><br>
+<img src="images/day133.png"><br>
+<br>
 
 
+## DAY-4
+### TITLE: Pre-layout timing analysis and importance of good clock tree.
+<hr>
+<h5>CONTENT:</h5>
+<ol>
+  <li><a href="#">Labs for CMOS inverter ngspice simulations</a></li>
+  <li><a href="#">Inception of Layout and CMOS fabrication process</a></li>
+  <li><a href="">Sky130 Tech File Labs</a></li>
+</ol>
+<hr>
+
+### 1. 
+<hr>
+<br>
