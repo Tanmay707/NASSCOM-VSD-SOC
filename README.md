@@ -437,7 +437,7 @@ The final transition delay calculation.<br>
 <ol>
   <li><a href="#1-labs-for-cmos-inverter-ngspice-simulations">Labs for CMOS inverter ngspice simulations</a></li>
   <li><a href="#2-inception-of-layout-and-cmos-fabrication-process">Inception of Layout and CMOS fabrication process</a></li>
-  <li><a href="#">Sky130 Tech File Labs</a></li>
+  <li><a href="#3-sky130-tech-file-labs">Sky130 Tech File Labs</a></li>
 </ol>
 <hr>
 
@@ -507,7 +507,77 @@ Now, the layout of the CMOS inverter will be shown below.<br>
 ### 2. Inception of Layout and CMOS fabrication process
 <hr>
 <br>
+This, module completely deals with the fabrication process of a Twin-Well CMOS device fabrication.<br>
+Lets, find that which layer consists of which type and also extract the spice file to get all the parasitics.<br>
+The below shown are the different layers and their description.<br>
+<img src="images/day114.png"><br>
+<img src="images/day115.png"><br>
+<img src="images/day116.png"><br>
+<img src="images/day117.png"><br>
+<img src="images/day118.png"><br>
+Now, create and extract file from the tckon.tcl window.<br>
 
+```console
+%extract all
+```
+<br>
+Thus, the extract file is created.<br>
+<img src="images/day119.png"><br>
 
+Now, create an Spice file from the tckon window.<br>
+
+```console
+%ext2spice cthresh 0 rthresh 0
+%ext2spice
+```
+<br>
+Thus, the spice file is created and shown below.<br>
+<img src="images/day120.png"><br>
+Now, open the spice file using the following command.<br>
+
+```console
+vim sky130_inv.spice
+```
+<br>
+<img src="images/day121.png"><br>
+<hr>
+
+### 3. Sky130 Tech File Labs
+<hr>
+<br>
+In this we will characterise the extracted spice file through the vim editor and the file after changes is shown below.<br>
+<img src="images/day122.png"><br>
+Now, we run the ngspice simulation.<br>
+
+```console
+ngspice sky130_inv.spice
+```
+<br>
+The following will be the output.<br>
+<img src="images/day123.png"><br>
+Now, we plot the output vs time curve to calculate the rise and fall transition time and the rise and fall delay time.<br>
+
+```console
+plot y vs time a
+```
+<br>
+The output is:<br>
+<img src="images/day124.png"><br>
+The Rise transition data points at 20% and 80% are shown below.<br>
+<img src="images/day125.png"><br>
+Thus, Rise transition = 2.24025e-09 - 2.17995e-09 = 60.30ps
+<br>
+The fall transition data points at 80% and 20% are shown below.<br>
+<img src="images/day126.png"><br>
+Thus, Fall transition = 4.05075e-09 - 4.09369e-09 = - 42.94ps
+<br>
+The Rise delay data points at 50% input and 50% output are shown below.<br>
+<img src="images/day127.png"><br>
+Thus, Rise delay = 2.20781e-09 - 2.15078e-09 = 57.03ps
+<br>
+The fall delay data points at 50% input and 50% output are shown below.<br>
+<img src="images/day128.png"><br>
+Thus, Fall transition = 4.07547e-09 - 4.05004e-09 = 25.43ps
+<br>
 
 
