@@ -580,7 +580,7 @@ The fall delay data points at 50% input and 50% output are shown below.<br>
 Thus, Fall transition = 4.07547e-09 - 4.05004e-09 = 25.43ps
 <br>
 <br>
-Now, taking the Lab challanges that are to fix poly.9 error and to implement polyresistor spacing to diff and tap also to describe DRC error as geometrical construct and last challenge is to find the missing and incorrect rules.<br>
+Now, taking the Lab challanges that are to fix poly.9 error and to implement polyresistor spacing to diff and tap also to describe DRC error as geometrical construct and last challenge is to find the missing and incorrect rules.<br><br>
 Shown below is the poly resistor challenge.<br>
 <img src="images/day129.png"><br>
 <img src="images/day130.png"><br>
