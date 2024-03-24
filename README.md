@@ -606,3 +606,52 @@ Shown below is the n_well missing rule challenge.<br>
 ### 1. Timing modelling using delay tables
 <hr>
 <br>
+Now, in this module we talking about the timing modelling and delay tables and also the conversion of grid info to track info.<br>
+In this we also convert the magic layout to std cell LEF.<br>
+Now lets convert the grid info to track info.<br>
+Path to open the track info file.<br>
+
+```console
+cd openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/less tracks.info
+```
+<br>
+Now, open the magic layout from the below directory.<br>
+
+```console
+cd openlane/vsdstdcelldesign/
+```
+<br>
+
+Now the command to open Magic layout will be:<br>
+
+```console
+magic -T sky130A.tech sky130_inv.mag &
+```
+<br>
+Now, converting the grid info to track info from the Tkcon.tcl window.<br>
+<img src="images/day134.png"><br>
+The tracks.info file is shown below.<br>
+<img src="images/day135.png"><br>
+From the above changed grid layout we observed that the input and output ports are lying on the intersection of X and Y pitches.<br>
+Now, lets convert the magic layout to the std cell LEF file. We first make the copy of the layout by using the following command from the Tkcon.tcl window.<br>
+
+```console
+% save sky130_vsdinv.mag
+```
+<br>
+Now, convert the following layout into the lef file by using the following command.<br>
+
+```console
+% lef write
+```
+<br>
+Now, the .mag and .lef both files are generated and the lef file is shown below.<br>
+<img src="images/day136.png"><br>
+Thus, each and every port is prioritized by using the following class and use commands and they are written in the lef file as per their order.<br>
+
+```console
+% port class input
+% port use signal
+```
+<br>
+
