@@ -597,7 +597,7 @@ Shown below is the n_well missing rule challenge.<br>
 <h5>CONTENT:</h5>
 <ol>
   <li><a href="#1-timing-modelling-using-delay-tables">Timing modelling using delay tables</a></li>
-  <li><a href="#">Timing analysis with ideal clocks using openSTA</a></li>
+  <li><a href="#2-timing-analysis-with-ideal-clocks-using-opensta">Timing analysis with ideal clocks using openSTA</a></li>
   <li><a href="#">Clock tree synthesis TritonCTS and signal integrity</a></li>
   <li><a href="#">Timing analysis with real clocks using openSTA</a></li>
 </ol>
@@ -654,4 +654,99 @@ Thus, each and every port is prioritized by using the following class and use co
 % port use signal
 ```
 <br>
+Now, lets see the steps that how to include a new cell in synthesis.<br>
+Let's copy 4 files that are the .lef file and all the 3 files at all temperature corners. To the following picorv32a design directory.<br>
 
+```console
+/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src
+```
+<br>
+The location of the lef file is:<br>\
+File name: sky130_vsdinv.lef<br>
+
+```console
+cd openlane/vsdstdcelldesign/
+```
+The other 3 files are at the following location:<br>
+File names:<br>
+<ol>
+<li>sky130_fd_sc_hd__fast.lib</li>
+<li>sky130_fd_sc_hd__slow.lib</li>
+<li>sky130_fd_sc_hd__typical.lib</li>
+</ol>
+<br>
+
+```console
+cd openlane/vsdstdcelldesign/libs/
+```
+<br>
+Now, again change the directory to designs/picorv32a to change the config.tcl file.<br>
+The updated config.tcl file should be like this.<br>
+<img src="images/day137.png"><br>
+Then, open the interactive window in the new tab for the synthesis of the new cell.<br>
+Following commands are to be used step be step before running synthesis command.<br>
+
+```console
+docker
+
+flow.tcl -interactive
+
+package require openlane 0.9
+
+prep -design picorv32a -tag 23-03_10-48 -overwrite
+
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+
+add_lefs -src $lefs
+
+run_synthesis
+```
+<br>
+Thus, after running the synthesis we will encounter with the huge slack so to remove that we will see it further.<br>
+Now, lets understand the usage of delay tables for timing modelling and power aware Clock tree synthesis (CTS).<br>
+<img src="images/day138.png"><br>
+Thus, as the 2nd stage of the gates are of same type thats why we have a 0 values skew. But, if this configuration is changed then we encounter with the non zeroed skew and on the large scale it will lead to a large amount of skew and output latency.<br>
+Also, the power aware CTS is shown below as we keep on the any one gate at a time for 2nd stage.<br>
+<img src="images/day139.png"><br>
+Now, the steps to configure the synthesis settings to fix slack and to include vsdinv file.<br>
+Set all the parameters then run the synthesis as per the commands below in the serial order.<br>
+
+```console
+set ::env(SYNTH_STRATEGY) 1
+set ::env(SYNTH_BUFFERING) 1
+set ::env(SYNTH_SIZING) 1
+init_floorplan
+place_io
+global_placement_or
+detailed_placement
+tap_decap_or
+detailed_placement
+```
+<br>
+Then, change to the following directory to see the magic layout.<br>
+
+```console
+cd openlane/designs/picorv32a/runs/23-03_10-48/results/placement
+```
+<br>
+By using the following command open the magic layout from the above folder.<br>
+
+```console
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech led read ../../tmp/merged.lef def read picorv32a.placement.def &
+```
+<br>
+Thus, the following output will be shown.<br>
+<img src="images/day140.png"><br>
+To get the detailed view use the following command from Tkcon.tcl window.<br>
+
+```console
+expand
+```
+<br>
+<img src="images/day141.png"><br>
+Hence, we are able to fix the slack and sucessfully included vsdinv file.<br>
+<hr>
+
+### 2. Timing analysis with ideal clocks using openSTA
+<hr>
+<br>
