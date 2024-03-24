@@ -27,7 +27,7 @@ Author- Tanmay Agrawal
 
 ### 1. How to talk to computer
 <hr>
-<img src="images/day11.png">
+<img src="images/day11.png"  height="500">
 <br>
 This is the Arduino Leonardo board consisting of a Processor/SOC and various other interconnecting devices and peripherals.<br>
 The highlighted part in the above figure is the on block where the entire VLSI moves around.<br><br>
