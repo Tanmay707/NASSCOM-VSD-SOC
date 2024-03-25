@@ -374,8 +374,6 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 <img src="images/day80.png"><br>
 This shows the legal placement of standard cells.<br>
 <img src="images/day81.png"><br>
-Thus, the vsd_inv cell in the final layout is shown below.<br>
-<img src="images/vsd3.png"><br>
 <hr>
 
 ### 3. Cell design and characterization flows
@@ -750,6 +748,8 @@ expand
 ```
 <br>
 <img src="images/day141.png"><br>
+Thus, the vsd_inv cell in the final layout is shown below.<br>
+<img src="images/vsd3.png"><br>
 Hence, we are able to fix the slack and sucessfully included vsdinv file.<br>
 <hr>
 
