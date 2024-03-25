@@ -639,6 +639,10 @@ Now, lets convert the magic layout to the std cell LEF file. We first make the c
 % save sky130_vsdinv.mag
 ```
 <br>
+<img src="images/vsd1"><br>
+Also, the layout of the copied cell is shown below.<br>
+<img src="images/vsd2"><br>
+
 Now, convert the following layout into the lef file by using the following command.<br>
 
 ```console
