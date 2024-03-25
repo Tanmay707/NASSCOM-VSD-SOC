@@ -821,3 +821,53 @@ Thus, the CTS RUNS are verified and shown below.<br>
 ### 4. Timing analysis with real clocks using openSTA
 <hr>
 <br>
+In this module we understand the setup and hold timing analysis using real clocks.<br>
+Thus, the setup timing analysis and the slack definition is shown below.<br>
+<img src="images/day158.png"><br>
+Also, the Hold timing analysis and the slack definition in the case of hold time is shown below.<br>
+<img src="images/day159.png"><br>
+Thus, on the chip level the delay time for the Launch Flop is shown below.<br>
+<img src="images/day160.png"><br>
+Also, the delay time for the Capture Flop and the Skew value is shown below.<br>
+<img src="images/day161.png"><br>
+Thus, the value for hold timing and setup timing is shown below.<br>
+<img src="images/day162.png"><br>
+<img src="images/day163.png"><br>
+Thus, all this timing design is for a single clock.<br>
+Now. for doing timing analysis for the real clocks we invoke the openroad.<br>
+
+```console
+openroad
+```
+<br>
+After invoking it we now create a db file and to create it we read various files as shown below.<br>
+<img src="images/day164.png"><br>
+Now, after checking the reports we come up with the Hold and SetupTime delays.<br>
+Hold slack :<br>
+<img src="images/day165.png"><br>
+Setup Slack :<br>
+<img src="images/day166.png"><br>
+But, the process we are going with is incorrect.<br>
+Now, we read the created db file directly and obtain the hold and setup time slack.<br>
+<img src="images/day167.png"><br>
+Hold slack:<br>
+<img src="images/day168.png"><br>
+Setup Slack:<br>
+<img src="images/day169.png"><br>
+<br>
+
+
+## DAY-5
+### TITLE: Final steps for RTL2GDS using tritonRoute and openSTA.
+<hr>
+<h5>CONTENT:</h5>
+<ol>
+  <li><a href="#">Routing and design rule check (DRC)</a></li>
+  <li><a href="#">Power Distribution Network and Routing</a></li>
+  <li><a href="#">TritonRoute Features.</a></li>
+</ol>
+<hr>
+
+### 1. Routing and design rule check (DRC)
+<hr>
+<br>
