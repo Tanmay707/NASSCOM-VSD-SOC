@@ -598,7 +598,7 @@ Shown below is the n_well missing rule challenge.<br>
 <ol>
   <li><a href="#1-timing-modelling-using-delay-tables">Timing modelling using delay tables</a></li>
   <li><a href="#2-timing-analysis-with-ideal-clocks-using-opensta">Timing analysis with ideal clocks using openSTA</a></li>
-  <li><a href="#">Clock tree synthesis TritonCTS and signal integrity</a></li>
+  <li><a href="#3-clock-tree-synthesis-tritoncts-and-signal-integrity">Clock tree synthesis TritonCTS and signal integrity</a></li>
   <li><a href="#">Timing analysis with real clocks using openSTA</a></li>
 </ol>
 <hr>
@@ -748,5 +748,46 @@ Hence, we are able to fix the slack and sucessfully included vsdinv file.<br>
 <hr>
 
 ### 2. Timing analysis with ideal clocks using openSTA
+<hr>
+<br>
+In this set of modules we learn about the Setup Timing analysis and analysing timings with Ideal Clocks.<br>
+<img src="images/day142.png"><br>
+The clock provided by the PLL's will provide a temporary variation of the clock period this is termed as Jitter.<br>
+<img src="images/day143.png"><br>
+Thus, the final setup timing after introducing the jitter timing in the entire clock period.<br>
+<img src="images/day144.png"><br>
+Now, the setup time for a set of logic will be calculated as shown below but this should be less then the setup time calculated in the above diagram.<br>
+<img src="images/day145.png"><br>
+<img src="images/day146.png"><br>
+Now, lets see this observation practically on openLANE by making 2 different files on different locations.<br>
+File name: my_base.sdc<br>
+Path:<br>
+
+```console
+cd openlane/designs/picorv32a/src/
+```
+<br>
+<img src="images/day147.png"><br>
+File name: pre_sta.conf<br>
+Path:<br>
+
+```console
+cd openlane/
+```
+<br>
+<img src="images/day148.png"><br>
+So, to run the pre_sta.conf file write the below command from the above directory itself.<br>
+
+```console
+sta pre_sta.conf
+```
+<br>
+Now, the slack in 1st iteration is:<br>
+<img src="images/day149.png"><br>
+Now, the slack after improvement is:<br>
+<img src="images/day150.png"><br>
+<hr>
+
+### 3. Clock tree synthesis TritonCTS and signal integrity
 <hr>
 <br>
