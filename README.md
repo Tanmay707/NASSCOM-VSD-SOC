@@ -599,7 +599,7 @@ Shown below is the n_well missing rule challenge.<br>
   <li><a href="#1-timing-modelling-using-delay-tables">Timing modelling using delay tables</a></li>
   <li><a href="#2-timing-analysis-with-ideal-clocks-using-opensta">Timing analysis with ideal clocks using openSTA</a></li>
   <li><a href="#3-clock-tree-synthesis-tritoncts-and-signal-integrity">Clock tree synthesis TritonCTS and signal integrity</a></li>
-  <li><a href="#">Timing analysis with real clocks using openSTA</a></li>
+  <li><a href="#4-timing-analysis-with-real-clocks-using-opensta">Timing analysis with real clocks using openSTA</a></li>
 </ol>
 <hr>
 
@@ -789,5 +789,29 @@ Now, the slack after improvement is:<br>
 <hr>
 
 ### 3. Clock tree synthesis TritonCTS and signal integrity
+<hr>
+<br>
+In this set of modules we learnt about the clock tree routing and buffering using H-Tree algorithm.
+Below shown is the H-Tree algorithm used in CT routing.<br>
+<img src="images/day151.png"><br>
+Also the Buffering in Clock Tree Routing is done as shown below.<br>
+<img src="images/day152.png"><br>
+Also, we looked into the problem of crosstalk in routing which leads to increase the delay in the ckt. Thus, to overcome this we do clock net sheilding.<br>
+<img src="images/day153.png"><br>
+<img src="images/day154.png"><br>
+Now, to run the clock tree synthesis we use the following command from the interactive window.<br>
+
+```console
+run_cts
+```
+<br>
+Thus, the CTS is completed and shown below.<br>
+<img src="images/day155.png"><br>
+<img src="images/day156.png"><br>
+Thus, the CTS RUNS are verified and shown below.<br>
+<img src="images/day157.png"><br>
+<hr>
+
+### 4. Timing analysis with real clocks using openSTA
 <hr>
 <br>
