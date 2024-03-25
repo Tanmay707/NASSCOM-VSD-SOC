@@ -1,6 +1,7 @@
 # NASSCOM-VSD-SOC
 This repository consists of a 5 Day workshop conducted by NASSCOM and VSD on SOC Design and Planning. Also, this includes all the 5 Days learning from videos provided by VSD and LAB work on the OpenLANE tool provided by NASSCOM.<br><br>
-Author- Tanmay Agrawal
+<h5><a href="https://www.linkedin.com/in/tanmay-agrawal-409746224/">Author-Tanmay Agrawal</a></h5>
+
 <br>
 ## Table Of Content
 <ol>
