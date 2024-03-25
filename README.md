@@ -1,4 +1,4 @@
-# NASSCOM-VSD-SOC
+![image](https://github.com/Tanmay707/NASSCOM-VSD-SOC/assets/99081560/d4d3aefc-9eff-4ea5-bb6c-195b1a387d4b)# NASSCOM-VSD-SOC
 This repository consists of a 5 Day workshop conducted by NASSCOM and VSD on SOC Design and Planning. Also, this includes all the 5 Days learning from videos provided by VSD and LAB work on the OpenLANE tool provided by NASSCOM.<br><br>
 Author- Tanmay Agrawal
 <br>
@@ -862,12 +862,90 @@ Setup Slack:<br>
 <hr>
 <h5>CONTENT:</h5>
 <ol>
-  <li><a href="#">Routing and design rule check (DRC)</a></li>
-  <li><a href="#">Power Distribution Network and Routing</a></li>
-  <li><a href="#">TritonRoute Features.</a></li>
+  <li><a href="#1-routing-and-design-rule-check-drc">Routing and design rule check (DRC)</a></li>
+  <li><a href="#2-power-distribution-network-and-routing">Power Distribution Network and Routing</a></li>
+  <li><a href="#3-tritonroute-features">TritonRoute Features</a></li>
 </ol>
 <hr>
 
 ### 1. Routing and design rule check (DRC)
 <hr>
 <br>
+In this module we are dicussing the routing techniques to route the std cells and macros on the core of a die.<br>
+We learnt about the Maze Routing strategy also known as Lee's Algorithm.<br>
+<img src="images/day170.png"><br>
+This algorithm always take two points one as a source and one as a target and basically chooses the shortest with minimum no. of bends.<br>
+<img src="images/day171.png"><br>
+Now, after successfull routing of all the cells we do the design rule check (DRC).<br>
+The few DRC voilations are shown below.<br>
+<img src="images/day172.png"><br>
+<img src="images/day173.png"><br>
+<img src="images/day174.png"><br>
+Now, the method to avoid Signal Shorting is to introduce another layer which are connected through a via.<br>
+<img src="images/day175.png"><br>
+<img src="images/day176.png"><br>
+Now, the final stage is Parasitic Extraction.<br>
+<img src="images/day177.png"><br>
+Thus, the routing strategy on a chip is shown as below.<br>
+<img src="images/vsd4.png"><br>
+<hr>
+
+### 2. Power Distribution Network and Routing
+<hr>
+<br>
+Now after Synthesis, floorplanning, placement and cts we are comming to the routing stage.<br>
+After the cts run few commands from starting of an openlane.<br>
+
+```console
+docker
+
+flow.tcl -interactive
+
+package require openlane 0.9
+
+prep -design picorv32a -tag 23-03_10-48      #(we do not overwrite it as it will remove the cts otherwise)
+
+echo $::env(CURRENT_DEF)
+```
+<br>
+Now, to build the power distribution network we use the following command.<br>
+
+```console
+gen_pdn
+```
+<br>
+<img src="images/day178.png"><br>
+Now before running routing setup the TritonRoute strategy as 0 then it will use the Triton13 as shown in figure.<br>
+<img src="images/day179.png"><br>
+Then run the following command:<br>
+
+```console
+run_routing
+```
+<br>
+Thus, we obtained the routing results as:<br>
+<ol>
+  <li>The number of voilations = 0</li>
+  <li>Obtained the picorv32a.spef file</li>
+</ol>
+<br>
+<img src="images/day180.png"><br>
+<img src="images/day181.png"><br>
+<img src="images/day182.png"><br>
+<hr>
+
+### 3. TritonRoute Features
+<hr>
+<br>
+In this module we learnt various features of TritonRoute.<br>
+<img src="images/day183.png"><br>
+<img src="images/day184.png"><br>
+<img src="images/day185.png"><br>
+<img src="images/day186.png"><br>
+<img src="images/day187.png"><br>
+<img src="images/day188.png"><br>
+<img src="images/day189.png"><br>
+We also learnt the Routing Topology Algorithm that uses MST technique.<br>
+<img src="images/day190.png"><br>
+<hr>
+Thus, we successfully obtained the spef file and we learnt to create our own design and the entire PnR flow.<br> 
